@@ -99,13 +99,14 @@ class App extends Component
       return(
         <div className="App">
           <header className="App-header">
-            <h1> Ethereum and InterPlanetary File System(IPFS) with Create React App</h1>
+            <h1> Calimo Tech Blockchain Storage</h1>
+            <img src="https:ipfs.io/ipfs/QmVqKYfEjdHmbWD4qML5RezYakhRQC3aJL5vj2qb4cBu8m" alt="Calimo Icon" width="90" height="90"/>
           </header>
           
           <hr />
 
         <Grid>
-          <h3> Choose file to send to IPFS </h3>
+          <h3> Select a file to upload on the Calimo Blockchain Storage </h3>
           <Form onSubmit={this.onSubmit}>
             <input 
               type = "file"
@@ -114,9 +115,11 @@ class App extends Component
              <Button 
              bsStyle="primary" 
              type="submit"> 
-             Send it 
+             Submit 
              </Button>
           </Form>
+
+          <img src={`https:ipfs.io/ipfs/${this.state.ipfsHash}`} alt=""/>
 
           <hr/>
             <Button onClick = {this.onClick}> Get Transaction Receipt </Button>
